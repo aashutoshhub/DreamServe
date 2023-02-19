@@ -1,0 +1,792 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8FA3E7B0-0409-4EAF-8D46-DB666AE93566}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Jobportal</RootNamespace>
+    <AssemblyName>Jobportal</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44330</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="about.aspx" />
+    <Content Include="assets\css\animate.min.css" />
+    <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\css\flaticon.css" />
+    <Content Include="assets\css\fontawesome-all.min.css" />
+    <Content Include="assets\css\magnific-popup.css" />
+    <Content Include="assets\css\nice-select.css" />
+    <Content Include="assets\css\owl.carousel.min.css" />
+    <Content Include="assets\css\price_rangs.css" />
+    <Content Include="assets\css\responsive.css" />
+    <Content Include="assets\css\slick.css" />
+    <Content Include="assets\css\slicknav.css" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\css\themify-icons.css" />
+    <Content Include="assets\fonts\fa-brands-400.svg" />
+    <Content Include="assets\fonts\fa-regular-400.svg" />
+    <Content Include="assets\fonts\fa-solid-900.svg" />
+    <Content Include="assets\fonts\flaticon.html" />
+    <Content Include="assets\fonts\Flaticon.svg" />
+    <Content Include="assets\fonts\themify.svg" />
+    <Content Include="assets\img\about\about_lft.png" />
+    <Content Include="assets\img\about\about_right.png" />
+    <Content Include="assets\img\about\pet_care.png" />
+    <Content Include="assets\img\adapt_icon\1.png" />
+    <Content Include="assets\img\adapt_icon\1.svg" />
+    <Content Include="assets\img\adapt_icon\2.png" />
+    <Content Include="assets\img\adapt_icon\3.png" />
+    <Content Include="assets\img\banner\dog.png" />
+    <Content Include="assets\img\banner\img.png" />
+    <Content Include="assets\img\blog\author.png" />
+    <Content Include="assets\img\blog\blog_4.png" />
+    <Content Include="assets\img\blog\home-blog1.jpg" />
+    <Content Include="assets\img\blog\home-blog2.jpg" />
+    <Content Include="assets\img\blog\learn_about_bg.png" />
+    <Content Include="assets\img\blog\single_blog_1.png" />
+    <Content Include="assets\img\blog\single_blog_2.png" />
+    <Content Include="assets\img\blog\single_blog_3.png" />
+    <Content Include="assets\img\blog\single_blog_4.png" />
+    <Content Include="assets\img\blog\single_blog_5.png" />
+    <Content Include="assets\img\blog\slide_thumb_1.png" />
+    <Content Include="assets\img\comment\comment_1.png" />
+    <Content Include="assets\img\comment\comment_2.png" />
+    <Content Include="assets\img\comment\comment_3.png" />
+    <Content Include="assets\img\elements\a.jpg" />
+    <Content Include="assets\img\elements\a2.jpg" />
+    <Content Include="assets\img\elements\d.jpg" />
+    <Content Include="assets\img\elements\disabled-check.png" />
+    <Content Include="assets\img\elements\disabled-radio.png" />
+    <Content Include="assets\img\elements\f1.jpg" />
+    <Content Include="assets\img\elements\f2.jpg" />
+    <Content Include="assets\img\elements\f3.jpg" />
+    <Content Include="assets\img\elements\f4.jpg" />
+    <Content Include="assets\img\elements\f5.jpg" />
+    <Content Include="assets\img\elements\f6.jpg" />
+    <Content Include="assets\img\elements\f7.jpg" />
+    <Content Include="assets\img\elements\f8.jpg" />
+    <Content Include="assets\img\elements\g1.jpg" />
+    <Content Include="assets\img\elements\g2.jpg" />
+    <Content Include="assets\img\elements\g3.jpg" />
+    <Content Include="assets\img\elements\g4.jpg" />
+    <Content Include="assets\img\elements\g5.jpg" />
+    <Content Include="assets\img\elements\g6.jpg" />
+    <Content Include="assets\img\elements\g7.jpg" />
+    <Content Include="assets\img\elements\g8.jpg" />
+    <Content Include="assets\img\elements\primary-check.png" />
+    <Content Include="assets\img\elements\primary-radio.png" />
+    <Content Include="assets\img\elements\success-check.png" />
+    <Content Include="assets\img\elements\success-radio.png" />
+    <Content Include="assets\img\favicon.ico" />
+    <Content Include="assets\img\gallery\1.png" />
+    <Content Include="assets\img\gallery\2.png" />
+    <Content Include="assets\img\gallery\3.png" />
+    <Content Include="assets\img\gallery\cv_bg.jpg" />
+    <Content Include="assets\img\gallery\how-applybg.png" />
+    <Content Include="assets\img\hero\abc.jpg" />
+    <Content Include="assets\img\hero\abc3.jpg" />
+    <Content Include="assets\img\hero\abc4.jpg" />
+    <Content Include="assets\img\hero\about.jpg" />
+    <Content Include="assets\img\hero\about1.jpg" />
+    <Content Include="assets\img\hero\about10.png" />
+    <Content Include="assets\img\hero\h1_hero.jpg" />
+    <Content Include="assets\img\icon\form.png" />
+    <Content Include="assets\img\icon\job-list1.png" />
+    <Content Include="assets\img\icon\job-list2.png" />
+    <Content Include="assets\img\icon\job-list3.png" />
+    <Content Include="assets\img\icon\job-list4.png" />
+    <Content Include="assets\img\icon\logo2.png" />
+    <Content Include="assets\img\logo\loder.jpg" />
+    <Content Include="assets\img\logo\logo.png" />
+    <Content Include="assets\img\offers\1.png" />
+    <Content Include="assets\img\offers\2.png" />
+    <Content Include="assets\img\offers\3.png" />
+    <Content Include="assets\img\our_blog\blog-img1.jpg" />
+    <Content Include="assets\img\post\next.png" />
+    <Content Include="assets\img\post\post_1.png" />
+    <Content Include="assets\img\post\post_10.png" />
+    <Content Include="assets\img\post\post_2.png" />
+    <Content Include="assets\img\post\post_3.png" />
+    <Content Include="assets\img\post\post_4.png" />
+    <Content Include="assets\img\post\post_5.png" />
+    <Content Include="assets\img\post\post_6.png" />
+    <Content Include="assets\img\post\post_7.png" />
+    <Content Include="assets\img\post\post_8.png" />
+    <Content Include="assets\img\post\post_9.png" />
+    <Content Include="assets\img\post\preview.png" />
+    <Content Include="assets\img\prising\1.png" />
+    <Content Include="assets\img\prising\10.png" />
+    <Content Include="assets\img\prising\2.png" />
+    <Content Include="assets\img\prising\3.png" />
+    <Content Include="assets\img\prising\4.png" />
+    <Content Include="assets\img\prising\5.png" />
+    <Content Include="assets\img\prising\6.png" />
+    <Content Include="assets\img\prising\7.png" />
+    <Content Include="assets\img\prising\8.png" />
+    <Content Include="assets\img\prising\9.png" />
+    <Content Include="assets\img\service\1.png" />
+    <Content Include="assets\img\service\2.png" />
+    <Content Include="assets\img\service\3.png" />
+    <Content Include="assets\img\service\footer_bg.jpg" />
+    <Content Include="assets\img\service\service_icon_1.png" />
+    <Content Include="assets\img\service\service_icon_2.png" />
+    <Content Include="assets\img\service\service_icon_3.png" />
+    <Content Include="assets\img\service\service_icon_bg_1.png" />
+    <Content Include="assets\img\service\support-img.jpg" />
+    <Content Include="assets\img\service\support-img1.jpg" />
+    <Content Include="assets\img\team\1.png" />
+    <Content Include="assets\img\team\2.png" />
+    <Content Include="assets\img\team\3.png" />
+    <Content Include="assets\img\testmonial\1.png" />
+    <Content Include="assets\img\testmonial\testimonial-founder.png" />
+    <Content Include="assets\js\animated.headline.js" />
+    <Content Include="assets\js\bootstrap.min.js" />
+    <Content Include="assets\js\contact.js" />
+    <Content Include="assets\js\jquery.ajaxchimp.min.js" />
+    <Content Include="assets\js\jquery.form.js" />
+    <Content Include="assets\js\jquery.magnific-popup.js" />
+    <Content Include="assets\js\jquery.nice-select.min.js" />
+    <Content Include="assets\js\jquery.paroller.min.js" />
+    <Content Include="assets\js\jquery.scrollUp.min.js" />
+    <Content Include="assets\js\jquery.slicknav.min.js" />
+    <Content Include="assets\js\jquery.sticky.js" />
+    <Content Include="assets\js\jquery.validate.min.js" />
+    <Content Include="assets\js\mail-script.js" />
+    <Content Include="assets\js\main.js" />
+    <Content Include="assets\js\one-page-nav-min.js" />
+    <Content Include="assets\js\owl.carousel.min.js" />
+    <Content Include="assets\js\plugins.js" />
+    <Content Include="assets\js\popper.min.js" />
+    <Content Include="assets\js\price_rangs.js" />
+    <Content Include="assets\js\slick.min.js" />
+    <Content Include="assets\js\vendor\jquery-1.12.4.min.js" />
+    <Content Include="assets\js\vendor\modernizr-3.5.0.min.js" />
+    <Content Include="assets\js\wow.min.js" />
+    <Content Include="contact.aspx" />
+    <Content Include="DBAssests\css\app.css" />
+    <Content Include="DBAssests\css\bootstrap-extended.css" />
+    <Content Include="DBAssests\css\bootstrap.min.css" />
+    <Content Include="DBAssests\css\dark-theme.css" />
+    <Content Include="DBAssests\css\header-colors.css" />
+    <Content Include="DBAssests\css\icons.css" />
+    <Content Include="DBAssests\css\pace.min.css" />
+    <Content Include="DBAssests\css\semi-dark.css" />
+    <Content Include="DBAssests\flags\1x1\ad.svg" />
+    <Content Include="DBAssests\flags\1x1\ae.svg" />
+    <Content Include="DBAssests\flags\1x1\af.svg" />
+    <Content Include="DBAssests\flags\1x1\ag.svg" />
+    <Content Include="DBAssests\flags\1x1\ai.svg" />
+    <Content Include="DBAssests\flags\1x1\al.svg" />
+    <Content Include="DBAssests\flags\1x1\am.svg" />
+    <Content Include="DBAssests\flags\1x1\ao.svg" />
+    <Content Include="DBAssests\flags\1x1\aq.svg" />
+    <Content Include="DBAssests\flags\1x1\ar.svg" />
+    <Content Include="DBAssests\flags\1x1\as.svg" />
+    <Content Include="DBAssests\flags\1x1\at.svg" />
+    <Content Include="DBAssests\flags\1x1\au.svg" />
+    <Content Include="DBAssests\flags\1x1\aw.svg" />
+    <Content Include="DBAssests\flags\1x1\ax.svg" />
+    <Content Include="DBAssests\flags\1x1\az.svg" />
+    <Content Include="DBAssests\flags\1x1\ba.svg" />
+    <Content Include="DBAssests\flags\1x1\bb.svg" />
+    <Content Include="DBAssests\flags\1x1\bd.svg" />
+    <Content Include="DBAssests\flags\1x1\be.svg" />
+    <Content Include="DBAssests\flags\1x1\bf.svg" />
+    <Content Include="DBAssests\flags\1x1\bg.svg" />
+    <Content Include="DBAssests\flags\1x1\bh.svg" />
+    <Content Include="DBAssests\flags\1x1\bi.svg" />
+    <Content Include="DBAssests\flags\1x1\bj.svg" />
+    <Content Include="DBAssests\flags\1x1\bl.svg" />
+    <Content Include="DBAssests\flags\1x1\bm.svg" />
+    <Content Include="DBAssests\flags\1x1\bn.svg" />
+    <Content Include="DBAssests\flags\1x1\bo.svg" />
+    <Content Include="DBAssests\flags\1x1\bq.svg" />
+    <Content Include="DBAssests\flags\1x1\br.svg" />
+    <Content Include="DBAssests\flags\1x1\bs.svg" />
+    <Content Include="DBAssests\flags\1x1\bt.svg" />
+    <Content Include="DBAssests\flags\1x1\bv.svg" />
+    <Content Include="DBAssests\flags\1x1\bw.svg" />
+    <Content Include="DBAssests\flags\1x1\by.svg" />
+    <Content Include="DBAssests\flags\1x1\bz.svg" />
+    <Content Include="DBAssests\flags\1x1\ca.svg" />
+    <Content Include="DBAssests\flags\1x1\cc.svg" />
+    <Content Include="DBAssests\flags\1x1\cd.svg" />
+    <Content Include="DBAssests\flags\1x1\cf.svg" />
+    <Content Include="DBAssests\flags\1x1\cg.svg" />
+    <Content Include="DBAssests\flags\1x1\ch.svg" />
+    <Content Include="DBAssests\flags\1x1\ci.svg" />
+    <Content Include="DBAssests\flags\1x1\ck.svg" />
+    <Content Include="DBAssests\flags\1x1\cl.svg" />
+    <Content Include="DBAssests\flags\1x1\cm.svg" />
+    <Content Include="DBAssests\flags\1x1\cn.svg" />
+    <Content Include="DBAssests\flags\1x1\co.svg" />
+    <Content Include="DBAssests\flags\1x1\cr.svg" />
+    <Content Include="DBAssests\flags\1x1\cu.svg" />
+    <Content Include="DBAssests\flags\1x1\cv.svg" />
+    <Content Include="DBAssests\flags\1x1\cw.svg" />
+    <Content Include="DBAssests\flags\1x1\cx.svg" />
+    <Content Include="DBAssests\flags\1x1\cy.svg" />
+    <Content Include="DBAssests\flags\1x1\cz.svg" />
+    <Content Include="DBAssests\flags\1x1\de.svg" />
+    <Content Include="DBAssests\flags\1x1\dj.svg" />
+    <Content Include="DBAssests\flags\1x1\dk.svg" />
+    <Content Include="DBAssests\flags\1x1\dm.svg" />
+    <Content Include="DBAssests\flags\1x1\do.svg" />
+    <Content Include="DBAssests\flags\1x1\dz.svg" />
+    <Content Include="DBAssests\flags\1x1\ec.svg" />
+    <Content Include="DBAssests\flags\1x1\ee.svg" />
+    <Content Include="DBAssests\flags\1x1\eg.svg" />
+    <Content Include="DBAssests\flags\1x1\eh.svg" />
+    <Content Include="DBAssests\flags\1x1\er.svg" />
+    <Content Include="DBAssests\flags\1x1\es.svg" />
+    <Content Include="DBAssests\flags\1x1\et.svg" />
+    <Content Include="DBAssests\flags\1x1\fi.svg" />
+    <Content Include="DBAssests\flags\1x1\fj.svg" />
+    <Content Include="DBAssests\flags\1x1\fk.svg" />
+    <Content Include="DBAssests\flags\1x1\fm.svg" />
+    <Content Include="DBAssests\flags\1x1\fo.svg" />
+    <Content Include="DBAssests\flags\4x3\ad.svg" />
+    <Content Include="DBAssests\flags\4x3\ae.svg" />
+    <Content Include="DBAssests\flags\4x3\af.svg" />
+    <Content Include="DBAssests\flags\4x3\ag.svg" />
+    <Content Include="DBAssests\flags\4x3\ai.svg" />
+    <Content Include="DBAssests\flags\4x3\al.svg" />
+    <Content Include="DBAssests\flags\4x3\am.svg" />
+    <Content Include="DBAssests\flags\4x3\ao.svg" />
+    <Content Include="DBAssests\flags\4x3\aq.svg" />
+    <Content Include="DBAssests\flags\4x3\ar.svg" />
+    <Content Include="DBAssests\flags\4x3\as.svg" />
+    <Content Include="DBAssests\flags\4x3\at.svg" />
+    <Content Include="DBAssests\flags\4x3\au.svg" />
+    <Content Include="DBAssests\flags\4x3\aw.svg" />
+    <Content Include="DBAssests\flags\4x3\ax.svg" />
+    <Content Include="DBAssests\flags\4x3\az.svg" />
+    <Content Include="DBAssests\flags\4x3\ba.svg" />
+    <Content Include="DBAssests\flags\4x3\bb.svg" />
+    <Content Include="DBAssests\flags\4x3\bd.svg" />
+    <Content Include="DBAssests\flags\4x3\be.svg" />
+    <Content Include="DBAssests\flags\4x3\bf.svg" />
+    <Content Include="DBAssests\flags\4x3\bg.svg" />
+    <Content Include="DBAssests\flags\4x3\bh.svg" />
+    <Content Include="DBAssests\flags\4x3\bi.svg" />
+    <Content Include="DBAssests\flags\4x3\bj.svg" />
+    <Content Include="DBAssests\flags\4x3\bl.svg" />
+    <Content Include="DBAssests\flags\4x3\bm.svg" />
+    <Content Include="DBAssests\flags\4x3\bn.svg" />
+    <Content Include="DBAssests\flags\4x3\bo.svg" />
+    <Content Include="DBAssests\flags\4x3\bq.svg" />
+    <Content Include="DBAssests\flags\4x3\br.svg" />
+    <Content Include="DBAssests\flags\4x3\bs.svg" />
+    <Content Include="DBAssests\flags\4x3\bt.svg" />
+    <Content Include="DBAssests\flags\4x3\bv.svg" />
+    <Content Include="DBAssests\flags\4x3\bw.svg" />
+    <Content Include="DBAssests\flags\4x3\by.svg" />
+    <Content Include="DBAssests\flags\4x3\bz.svg" />
+    <Content Include="DBAssests\flags\4x3\ca.svg" />
+    <Content Include="DBAssests\flags\4x3\cc.svg" />
+    <Content Include="DBAssests\flags\4x3\cd.svg" />
+    <Content Include="DBAssests\flags\4x3\cf.svg" />
+    <Content Include="DBAssests\flags\4x3\cg.svg" />
+    <Content Include="DBAssests\flags\4x3\ch.svg" />
+    <Content Include="DBAssests\flags\4x3\ci.svg" />
+    <Content Include="DBAssests\flags\4x3\ck.svg" />
+    <Content Include="DBAssests\flags\4x3\cl.svg" />
+    <Content Include="DBAssests\flags\4x3\cm.svg" />
+    <Content Include="DBAssests\flags\4x3\cn.svg" />
+    <Content Include="DBAssests\flags\4x3\co.svg" />
+    <Content Include="DBAssests\flags\4x3\cr.svg" />
+    <Content Include="DBAssests\flags\4x3\cu.svg" />
+    <Content Include="DBAssests\flags\4x3\cv.svg" />
+    <Content Include="DBAssests\flags\4x3\cw.svg" />
+    <Content Include="DBAssests\flags\4x3\cx.svg" />
+    <Content Include="DBAssests\flags\4x3\cy.svg" />
+    <Content Include="DBAssests\flags\4x3\cz.svg" />
+    <Content Include="DBAssests\flags\4x3\de.svg" />
+    <Content Include="DBAssests\flags\4x3\dj.svg" />
+    <Content Include="DBAssests\flags\4x3\dk.svg" />
+    <Content Include="DBAssests\flags\4x3\dm.svg" />
+    <Content Include="DBAssests\flags\4x3\do.svg" />
+    <Content Include="DBAssests\flags\4x3\dz.svg" />
+    <Content Include="DBAssests\flags\4x3\ec.svg" />
+    <Content Include="DBAssests\flags\4x3\ee.svg" />
+    <Content Include="DBAssests\flags\4x3\eg.svg" />
+    <Content Include="DBAssests\flags\4x3\eh.svg" />
+    <Content Include="DBAssests\flags\4x3\er.svg" />
+    <Content Include="DBAssests\flags\4x3\es.svg" />
+    <Content Include="DBAssests\flags\4x3\et.svg" />
+    <Content Include="DBAssests\flags\4x3\fi.svg" />
+    <Content Include="DBAssests\flags\4x3\fj.svg" />
+    <Content Include="DBAssests\flags\4x3\fk.svg" />
+    <Content Include="DBAssests\flags\4x3\fm.svg" />
+    <Content Include="DBAssests\flags\4x3\fo.svg" />
+    <Content Include="DBAssests\fonts\boxiconsd41d.svg" />
+    <Content Include="DBAssests\fonts\LineIcons.svg" />
+    <Content Include="DBAssests\images\avatars\avatar-1.png" />
+    <Content Include="DBAssests\images\bg-themes\1.png" />
+    <Content Include="DBAssests\images\bg-themes\2.png" />
+    <Content Include="DBAssests\images\bg-themes\3.png" />
+    <Content Include="DBAssests\images\favicon-32x32.png" />
+    <Content Include="DBAssests\images\gallery\01.png" />
+    <Content Include="DBAssests\images\gallery\02.png" />
+    <Content Include="DBAssests\images\gallery\03.png" />
+    <Content Include="DBAssests\images\gallery\04.png" />
+    <Content Include="DBAssests\images\gallery\05.png" />
+    <Content Include="DBAssests\images\gallery\06.png" />
+    <Content Include="DBAssests\images\gallery\07.png" />
+    <Content Include="DBAssests\images\gallery\08.png" />
+    <Content Include="DBAssests\images\gallery\09.png" />
+    <Content Include="DBAssests\images\gallery\10.png" />
+    <Content Include="DBAssests\images\gallery\11.png" />
+    <Content Include="DBAssests\images\gallery\12.png" />
+    <Content Include="DBAssests\images\gallery\13.png" />
+    <Content Include="DBAssests\images\gallery\14.png" />
+    <Content Include="DBAssests\images\gallery\15.png" />
+    <Content Include="DBAssests\images\gallery\16.png" />
+    <Content Include="DBAssests\images\gallery\17.png" />
+    <Content Include="DBAssests\images\gallery\18.png" />
+    <Content Include="DBAssests\images\gallery\19.png" />
+    <Content Include="DBAssests\images\gallery\35.png" />
+    <Content Include="DBAssests\images\gallery\36.png" />
+    <Content Include="DBAssests\images\gallery\37.png" />
+    <Content Include="DBAssests\images\icons\forgot-2.png" />
+    <Content Include="DBAssests\images\login-images\bg-forgot-password.jpg" />
+    <Content Include="DBAssests\images\login-images\bg-lock-screen.jpg" />
+    <Content Include="DBAssests\images\login-images\bg-login-img.jpg" />
+    <Content Include="DBAssests\images\logo-icon.png" />
+    <Content Include="DBAssests\images\products\01.png" />
+    <Content Include="DBAssests\images\products\02.png" />
+    <Content Include="DBAssests\images\products\03.png" />
+    <Content Include="DBAssests\images\products\04.png" />
+    <Content Include="DBAssests\images\products\05.png" />
+    <Content Include="DBAssests\images\products\06.png" />
+    <Content Include="DBAssests\images\products\07.png" />
+    <Content Include="DBAssests\images\products\08.png" />
+    <Content Include="DBAssests\images\products\09.png" />
+    <Content Include="DBAssests\images\products\10.png" />
+    <Content Include="DBAssests\images\products\11.png" />
+    <Content Include="DBAssests\images\products\12.png" />
+    <Content Include="DBAssests\images\products\13.png" />
+    <Content Include="DBAssests\images\products\14.png" />
+    <Content Include="DBAssests\images\products\15.png" />
+    <Content Include="DBAssests\images\products\16.png" />
+    <Content Include="DBAssests\images\products\17.png" />
+    <Content Include="DBAssests\images\products\18.png" />
+    <Content Include="DBAssests\images\products\19.png" />
+    <Content Include="DBAssests\js\app.js" />
+    <Content Include="DBAssests\js\bootstrap.bundle.min.js" />
+    <Content Include="DBAssests\js\index.js" />
+    <Content Include="DBAssests\js\index2.js" />
+    <Content Include="DBAssests\js\index3.js" />
+    <Content Include="DBAssests\js\jquery.min.js" />
+    <Content Include="DBAssests\js\pace.min.js" />
+    <Content Include="DBAssests\js\widgets.js" />
+    <Content Include="DBAssests\plugins\apexcharts-bundle\js\apexcharts.min.js" />
+    <Content Include="DBAssests\plugins\bs-stepper\js\bs-stepper.min.js" />
+    <Content Include="DBAssests\plugins\bs-stepper\js\main.js" />
+    <Content Include="DBAssests\plugins\chartjs\js\Chart.extension.js" />
+    <Content Include="DBAssests\plugins\chartjs\js\Chart.min.js" />
+    <Content Include="DBAssests\plugins\datatable\js\dataTables.bootstrap5.min.js" />
+    <Content Include="DBAssests\plugins\datatable\js\jquery.dataTables.min.js" />
+    <Content Include="DBAssests\plugins\Drag-And-Drop\dist\imageuploadify.min.js" />
+    <Content Include="DBAssests\plugins\fancy-file-uploader\jquery.fancy-fileupload.js" />
+    <Content Include="DBAssests\plugins\fancy-file-uploader\jquery.fileupload.js" />
+    <Content Include="DBAssests\plugins\fancy-file-uploader\jquery.iframe-transport.js" />
+    <Content Include="DBAssests\plugins\fancy-file-uploader\jquery.ui.widget.js" />
+    <Content Include="DBAssests\plugins\form-repeater\repeater.js" />
+    <Content Include="DBAssests\plugins\fullcalendar\js\main.min.js" />
+    <Content Include="DBAssests\plugins\input-tags\js\tagsinput.js" />
+    <Content Include="DBAssests\plugins\metismenu\css\metisMenu.min.css" />
+    <Content Include="DBAssests\plugins\metismenu\js\metisMenu.min.js" />
+    <Content Include="DBAssests\plugins\morris\js\morris.js" />
+    <Content Include="DBAssests\plugins\notifications\js\lobibox.min.js" />
+    <Content Include="DBAssests\plugins\notifications\js\notification-custom-script.js" />
+    <Content Include="DBAssests\plugins\notifications\js\notifications.min.js" />
+    <Content Include="DBAssests\plugins\perfect-scrollbar\css\perfect-scrollbar.css" />
+    <Content Include="DBAssests\plugins\perfect-scrollbar\js\perfect-scrollbar.js" />
+    <Content Include="DBAssests\plugins\raphael\raphael-min.js" />
+    <Content Include="DBAssests\plugins\select2\js\select2-custom.js" />
+    <Content Include="DBAssests\plugins\simplebar\css\simplebar.css" />
+    <Content Include="DBAssests\plugins\simplebar\js\simplebar.min.js" />
+    <Content Include="DBAssests\plugins\sparkline-charts\jquery.sparkline.min.js" />
+    <Content Include="DBAssests\plugins\validation\jquery.validate.min.js" />
+    <Content Include="DBAssests\plugins\validation\validation-script.js" />
+    <Content Include="DBAssests\plugins\vectormap\jquery-jvectormap-2.0.2.css" />
+    <Content Include="DBAssests\plugins\vectormap\jquery-jvectormap-2.0.2.min.js" />
+    <Content Include="DBAssests\plugins\vectormap\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="Dboard.aspx" />
+    <Content Include="findjob.aspx" />
+    <Content Include="home.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="newJob.aspx" />
+    <Content Include="newjob_test.aspx" />
+    <Content Include="register.aspx" />
+    <Content Include="regLogin\css\style.css" />
+    <Content Include="regLogin\fonts\material-icon\css\material-design-iconic-font.css" />
+    <Content Include="regLogin\fonts\material-icon\css\material-design-iconic-font.min.css" />
+    <Content Include="regLogin\fonts\material-icon\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-300.svg" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-300italic.svg" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-500.svg" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-500italic.svg" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-600.svg" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-700.svg" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-700italic.svg" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-800.svg" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-800italic.svg" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-900.svg" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-italic.svg" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-regular.svg" />
+    <Content Include="regLogin\fonts\poppins\roboto-condensed-v16-latin-700.svg" />
+    <Content Include="regLogin\fonts\poppins\roboto-condensed-v16-latin-700italic.svg" />
+    <Content Include="regLogin\fonts\poppins\roboto-condensed-v16-latin-italic.svg" />
+    <Content Include="regLogin\fonts\poppins\roboto-condensed-v16-latin-regular.svg" />
+    <Content Include="regLogin\images\signin-image.jpg" />
+    <Content Include="regLogin\images\signup-image.jpg" />
+    <Content Include="regLogin\js\main.js" />
+    <Content Include="regLogin\vendor\jquery\jquery-ui.min.js" />
+    <Content Include="regLogin\vendor\jquery\jquery.min.js" />
+    <Content Include="userList.aspx" />
+    <Content Include="viewJob.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="about.aspx.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="about.aspx.designer.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contact.aspx.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contact.aspx.designer.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DBM.Master.cs">
+      <DependentUpon>DBM.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DBM.Master.designer.cs">
+      <DependentUpon>DBM.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Dboard.aspx.cs">
+      <DependentUpon>Dboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dboard.aspx.designer.cs">
+      <DependentUpon>Dboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="findjob.aspx.cs">
+      <DependentUpon>findjob.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="findjob.aspx.designer.cs">
+      <DependentUpon>findjob.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="headFoot.Master.cs">
+      <DependentUpon>headFoot.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="headFoot.Master.designer.cs">
+      <DependentUpon>headFoot.Master</DependentUpon>
+    </Compile>
+    <Compile Include="home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="newJob.aspx.cs">
+      <DependentUpon>newJob.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="newJob.aspx.designer.cs">
+      <DependentUpon>newJob.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="newjob_test.aspx.cs">
+      <DependentUpon>newjob_test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="newjob_test.aspx.designer.cs">
+      <DependentUpon>newjob_test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="register.aspx.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="register.aspx.designer.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="userList.aspx.cs">
+      <DependentUpon>userList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="userList.aspx.designer.cs">
+      <DependentUpon>userList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="viewJob.aspx.cs">
+      <DependentUpon>viewJob.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewJob.aspx.designer.cs">
+      <DependentUpon>viewJob.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="headFoot.Master" />
+    <Content Include="assets\fonts\fa-brands-400.eot" />
+    <Content Include="assets\fonts\fa-brands-400.ttf" />
+    <Content Include="assets\fonts\fa-brands-400.woff" />
+    <Content Include="assets\fonts\fa-brands-400.woff2" />
+    <Content Include="assets\fonts\fa-regular-400.eot" />
+    <Content Include="assets\fonts\fa-regular-400.ttf" />
+    <Content Include="assets\fonts\fa-regular-400.woff" />
+    <Content Include="assets\fonts\fa-regular-400.woff2" />
+    <Content Include="assets\fonts\fa-solid-900.eot" />
+    <Content Include="assets\fonts\fa-solid-900.ttf" />
+    <Content Include="assets\fonts\fa-solid-900.woff" />
+    <Content Include="assets\fonts\fa-solid-900.woff2" />
+    <Content Include="assets\fonts\Flaticon.eot" />
+    <Content Include="assets\fonts\Flaticon.ttf" />
+    <Content Include="assets\fonts\Flaticon.woff" />
+    <Content Include="assets\fonts\Flaticon.woff2" />
+    <Content Include="assets\fonts\themify.eot" />
+    <Content Include="assets\fonts\themify.ttf" />
+    <Content Include="assets\fonts\themify.woff" />
+    <Content Include="assets\fonts\_flaticon.scss" />
+    <Content Include="assets\scss\style.scss" />
+    <Content Include="assets\scss\_apply-proces.scss" />
+    <Content Include="assets\scss\_blog.scss" />
+    <Content Include="assets\scss\_blog_page.scss" />
+    <Content Include="assets\scss\_bradcam.scss" />
+    <Content Include="assets\scss\_color.scss" />
+    <Content Include="assets\scss\_common.scss" />
+    <Content Include="assets\scss\_contact.scss" />
+    <Content Include="assets\scss\_cv-online.scss" />
+    <Content Include="assets\scss\_elements.scss" />
+    <Content Include="assets\scss\_extend.scss" />
+    <Content Include="assets\scss\_featured-Jobs.scss" />
+    <Content Include="assets\scss\_footer.scss" />
+    <Content Include="assets\scss\_h1-hero.scss" />
+    <Content Include="assets\scss\_headerMenu.scss" />
+    <Content Include="assets\scss\_job_details.scss" />
+    <Content Include="assets\scss\_job_listing.scss" />
+    <Content Include="assets\scss\_mixins.scss" />
+    <Content Include="assets\scss\_overlay.scss" />
+    <Content Include="assets\scss\_pagination.scss" />
+    <Content Include="assets\scss\_recent.scss" />
+    <Content Include="assets\scss\_services.scss" />
+    <Content Include="assets\scss\_services_section.scss" />
+    <Content Include="assets\scss\_support-company.scss" />
+    <Content Include="assets\scss\_team.scss" />
+    <Content Include="assets\scss\_testimonial.scss" />
+    <Content Include="assets\scss\_variables.scss" />
+    <Content Include="DBM.Master" />
+    <Content Include="DBAssests\fonts\boxicons.eot" />
+    <Content Include="DBAssests\fonts\boxicons.ttf" />
+    <Content Include="DBAssests\fonts\boxicons.woff" />
+    <Content Include="DBAssests\fonts\boxicons.woff2" />
+    <Content Include="DBAssests\fonts\LineIcons.eot" />
+    <Content Include="DBAssests\fonts\LineIcons.ttf" />
+    <Content Include="DBAssests\fonts\LineIcons.woff" />
+    <Content Include="DBAssests\fonts\LineIcons.woff2" />
+    <None Include="packages.config" />
+    <Content Include="regLogin\css\style.css.map" />
+    <Content Include="regLogin\fonts\material-icon\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="regLogin\fonts\material-icon\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="regLogin\fonts\material-icon\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="regLogin\fonts\material-icon\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-300.eot" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-300.ttf" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-300.woff" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-300.woff2" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-300italic.eot" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-300italic.ttf" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-300italic.woff" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-300italic.woff2" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-500.eot" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-500.ttf" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-500.woff" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-500.woff2" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-500italic.eot" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-500italic.ttf" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-500italic.woff" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-500italic.woff2" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-600.eot" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-600.ttf" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-600.woff" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-600.woff2" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-700.eot" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-700.ttf" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-700.woff" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-700.woff2" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-700italic.eot" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-700italic.ttf" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-700italic.woff" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-700italic.woff2" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-800.eot" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-800.ttf" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-800.woff" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-800.woff2" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-800italic.eot" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-800italic.ttf" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-800italic.woff" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-800italic.woff2" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-900.eot" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-900.ttf" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-900.woff" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-900.woff2" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-italic.eot" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-italic.ttf" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-italic.woff" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-italic.woff2" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-regular.eot" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-regular.ttf" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-regular.woff" />
+    <Content Include="regLogin\fonts\poppins\poppins-v5-latin-regular.woff2" />
+    <Content Include="regLogin\fonts\poppins\roboto-condensed-v16-latin-700.eot" />
+    <Content Include="regLogin\fonts\poppins\roboto-condensed-v16-latin-700.ttf" />
+    <Content Include="regLogin\fonts\poppins\roboto-condensed-v16-latin-700.woff" />
+    <Content Include="regLogin\fonts\poppins\roboto-condensed-v16-latin-700.woff2" />
+    <Content Include="regLogin\fonts\poppins\roboto-condensed-v16-latin-700italic.eot" />
+    <Content Include="regLogin\fonts\poppins\roboto-condensed-v16-latin-700italic.ttf" />
+    <Content Include="regLogin\fonts\poppins\roboto-condensed-v16-latin-700italic.woff" />
+    <Content Include="regLogin\fonts\poppins\roboto-condensed-v16-latin-700italic.woff2" />
+    <Content Include="regLogin\fonts\poppins\roboto-condensed-v16-latin-italic.eot" />
+    <Content Include="regLogin\fonts\poppins\roboto-condensed-v16-latin-italic.ttf" />
+    <Content Include="regLogin\fonts\poppins\roboto-condensed-v16-latin-italic.woff" />
+    <Content Include="regLogin\fonts\poppins\roboto-condensed-v16-latin-italic.woff2" />
+    <Content Include="regLogin\fonts\poppins\roboto-condensed-v16-latin-regular.eot" />
+    <Content Include="regLogin\fonts\poppins\roboto-condensed-v16-latin-regular.ttf" />
+    <Content Include="regLogin\fonts\poppins\roboto-condensed-v16-latin-regular.woff" />
+    <Content Include="regLogin\fonts\poppins\roboto-condensed-v16-latin-regular.woff2" />
+    <Content Include="regLogin\scss\common\extend.scss" />
+    <Content Include="regLogin\scss\common\fonts.scss" />
+    <Content Include="regLogin\scss\common\global.scss" />
+    <Content Include="regLogin\scss\common\minxi.scss" />
+    <Content Include="regLogin\scss\common\variables.scss" />
+    <Content Include="regLogin\scss\layouts\main.scss" />
+    <Content Include="regLogin\scss\layouts\responsive.scss" />
+    <Content Include="regLogin\scss\style.scss" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DBAssests\plugins\bs-stepper\css\" />
+    <Folder Include="DBAssests\plugins\datatable\css\" />
+    <Folder Include="DBAssests\plugins\fullcalendar\css\" />
+    <Folder Include="DBAssests\plugins\input-tags\css\" />
+    <Folder Include="DBAssests\plugins\notifications\css\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53398</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44330/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
